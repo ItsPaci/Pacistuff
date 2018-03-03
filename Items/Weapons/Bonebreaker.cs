@@ -43,11 +43,13 @@ namespace Pacistuff.Items.Weapons
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.CrimtaneBar, 10);
 			recipe.AddIngredient(ItemID.Chest, 1);
+			recipe.AddIngredient(null, "ExtractedSoul",3);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.DemoniteBar, 10);
 			recipe.AddIngredient(ItemID.Chest, 1);
+			recipe.AddIngredient(null, "ExtractedSoul",3);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

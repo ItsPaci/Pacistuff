@@ -3,22 +3,22 @@ using Terraria.ModLoader;
 
 namespace Pacistuff.Buffs
 {
-	public class KillerOld : ModBuff
+	public class BigSacrifice : ModBuff
 	{
 		public override void SetDefaults()
 		{
-			DisplayName.SetDefault("KillerOld");
-			Description.SetDefault("Melee damage bosted by 1000%, Crit doubled, Speed by 100% it has a catch tho.");
+			DisplayName.SetDefault("Big Sacrifice");
+			Description.SetDefault("This was a poor life choice.");
 			Main.debuff[Type] = false;
 			Main.buffNoSave[Type] = true;
-			Main.buffNoTimeDisplay[Type] = true;
+			Main.buffNoTimeDisplay[Type] = false;
 			canBeCleared = false;
 		}
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-		player.statDefense -= 99999;
-		player.meleeDamage += 10f;
+		player.statDefense -= 999999;
+		player.meleeDamage += 59f;
 		player.meleeSpeed += 1f;
 		player.meleeCrit += 50;
 		}

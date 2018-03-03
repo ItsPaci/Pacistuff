@@ -44,6 +44,7 @@ namespace Pacistuff.Items.Weapons
 			recipe.AddIngredient(ItemID.ShadowChest, 1);
 			recipe.AddIngredient(ItemID.GoldenKey, 3);
 			recipe.AddIngredient(ItemID.HellstoneBar, 5);
+			recipe.AddIngredient(null, "ExtractedSoul",3);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

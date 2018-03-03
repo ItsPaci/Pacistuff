@@ -48,6 +48,7 @@ namespace Pacistuff.Items.Weapons
 			recipe.AddIngredient(ItemID.Topaz, 5);
 			recipe.AddIngredient(ItemID.Amethyst, 5);
 			recipe.AddIngredient(ItemID.Emerald, 5);
+			recipe.AddIngredient(null, "ExtractedSoul",3);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

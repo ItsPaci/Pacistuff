@@ -45,6 +45,9 @@ namespace Pacistuff.Items.Weapons
 			recipe.AddIngredient(ItemID.LunarBar,10);
 			recipe.AddIngredient(ItemID.FragmentSolar,15);
 			recipe.AddIngredient(ItemID.Terrarian);
+			recipe.AddIngredient(null, "ExtractedSoul",25);
+			recipe.AddIngredient(null, "ImpureSoul",5);
+			recipe.AddIngredient(null, "PerfectSoul",1);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

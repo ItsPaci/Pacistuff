@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Pacistuff.Items
 {
-	public class SupersonicStone : ModItem
+	public class SuperStone : ModItem
 	{	
 			public override void SetDefaults()
 		{
@@ -21,16 +21,13 @@ namespace Pacistuff.Items
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Supersonic Stone");
-			Tooltip.SetDefault("Once owned by a blue speed mouse.\n" +
-"+600% Speed\n" +
-"+600% Acceleration\n" +
-"Not Consumable");
+			DisplayName.SetDefault("Super Stone");
+			Tooltip.SetDefault("An OP combination");
 		}
 
 		public override bool UseItem(Player player)
 		{
-			player.AddBuff(mod.BuffType("Supersonic"), 1800);
+			player.AddBuff(mod.BuffType("Superbuffed"), 1800);
 			player.AddBuff(BuffID.CursedInferno, 1800);
 			player.AddBuff(BuffID.Ichor, 1800);
 			player.AddBuff(BuffID.BrokenArmor, 1800);
@@ -40,12 +37,14 @@ namespace Pacistuff.Items
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(null,"ExtractedSoul",15);
-			recipe.AddIngredient(null,"ImpureSoul",1);
-			recipe.AddIngredient(null,"PureBar",9);
+			recipe.AddIngredient(null,"ExtractedSoul",30);
+			recipe.AddIngredient(null,"ImpureSoul",3);
+			recipe.AddIngredient(null,"PureBar",15);
+			recipe.AddIngredient(null,"KillerStone");
+			recipe.AddIngredient(null,"SupersonicStone");
 			recipe.AddIngredient(ItemID.Bottle,5);
-			recipe.AddIngredient(ItemID.Sapphire, 10);
-			recipe.AddIngredient(ItemID.Moonglow, 10);
+			recipe.AddIngredient(ItemID.Sapphire, 15);
+			recipe.AddIngredient(ItemID.Ruby, 15);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

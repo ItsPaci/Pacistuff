@@ -46,6 +46,8 @@ namespace Pacistuff.Items.Weapons
 			recipe.AddIngredient(null, "Naturalia");
 			recipe.AddIngredient(null, "CrystalCutter");
 			recipe.AddIngredient(null, "Maramusu");
+			recipe.AddIngredient(null, "ExtractedSoul",5);
+			recipe.AddIngredient(null, "ImpureSoul");
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Pacistuff.Items
 {
-	public class KillerStoneOld : ModItem
+	public class BigSacrificeStone : ModItem
 	{	
 			public override void SetDefaults()
 		{
@@ -16,29 +16,30 @@ namespace Pacistuff.Items
 			item.useTime = 15;
 			item.useStyle = 2;
 			item.UseSound = SoundID.Item3;
-			item.consumable = false;
+			item.consumable = true;
 		}
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Killer Stone Old");
-			Tooltip.SetDefault("Once owned by a masked knife user.\n" +
-"+1000% Melee Damage\n" +
-"+100% Melee Speed\n" +
-"+100% Crit\n" +
-"Not Consumable");
+			DisplayName.SetDefault("Big Sacrifice Stone");
+			Tooltip.SetDefault("This might be a bad life choice...\n" +
+"+5000% Melee Damage");
 		}
 
 		public override bool UseItem(Player player)
 		{
-			player.AddBuff(mod.BuffType("KillerOld"), 36000);
+			player.AddBuff(mod.BuffType("BigSacrifice"), 600);
 			return true;
 		}
 		
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(null,"ExtractedSoul",5);
+			recipe.AddIngredient(null,"PerfectSoul",1);
+			recipe.SetResult(this,2);
+			recipe.AddRecipe();
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(null, "ImpureSoul",5);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

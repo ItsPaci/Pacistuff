@@ -41,7 +41,8 @@ namespace Pacistuff.Items
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(null,"ExtractedSoul",10);
+			recipe.AddIngredient(null,"ExtractedSoul",15);
+			recipe.AddIngredient(null,"ImpureSoul",1);
 			recipe.AddIngredient(null,"PureBar",9);
 			recipe.AddIngredient(ItemID.Bottle,5);
 			recipe.AddIngredient(ItemID.Ruby, 10);

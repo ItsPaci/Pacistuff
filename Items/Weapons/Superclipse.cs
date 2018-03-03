@@ -46,6 +46,8 @@ namespace Pacistuff.Items.Weapons
 			recipe.AddIngredient(ItemID.SoulofMight,5);
 			recipe.AddIngredient(ItemID.SoulofSight,5);
 			recipe.AddIngredient(ItemID.SoulofFright,5);
+			recipe.AddIngredient(null, "ExtractedSoul",10);
+			recipe.AddIngredient(null, "ImpureSoul",3);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

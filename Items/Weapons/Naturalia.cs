@@ -44,6 +44,7 @@ namespace Pacistuff.Items.Weapons
 			recipe.AddIngredient(ItemID.IvyChest, 1);
 			recipe.AddIngredient(ItemID.JungleSpores, 10);
 			recipe.AddIngredient(ItemID.GoldenKey, 3);
+			recipe.AddIngredient(null, "ExtractedSoul",3);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
